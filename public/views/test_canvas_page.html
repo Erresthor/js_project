@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Drawing page</title>
+        <link rel="stylesheet" href="styles/style_test.css">
+        <link rel="icon" type="image/x-icon" href="/resources/favicon_brain.png">
+    </head>
+    <body style="display: flex; flex-direction: column;min-height: 100%;">
+        <div class="header_container">
+            <span class="title">
+                <div> <span style="font-size:50px; color:#280024; font-weight: bold ; font-family: 'Ink Free'"  > DRAWING </span> time ! </div>
+            </span>
+            <div class="button_container">
+                <a class="linkbutton" href="/">
+                    <span style="color:white ; font-family: fantasy;"> Home </span>
+                </a>
+            </div>
+            <div class="button_container" style="margin-left: 0px;">
+                <a class="linkbutton" href="/animation">
+                    <span style="color:white ; font-family: fantasy;"> Animation </span>
+                </a>
+            </div>
+            <div class="button_container" style="margin-right: 15%;margin-left: 0px;">
+                <a class="linkbutton" href="/e">
+                    <span style="color:white ; font-family: fantasy;"> E ? </span>
+                </a>
+            </div>
+        </div>
+        <div class="canvas_container"> 
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        
+        <script src="client_scripts/drawing_board.js" type="module"></script>
+        <script src="client_scripts/backend.js" type="module"></script>
+    </body>
+</html>

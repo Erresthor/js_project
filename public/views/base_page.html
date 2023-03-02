@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Home page</title>
+        <link rel="stylesheet" href="styles/style_test.css">
+        <link rel="icon" type="image/x-icon" href="/resources/favicon_brain.png">
+    </head>
+    <body>
+        <div class="good_feedback_flash" style="visibility:hidden;"></div>
+        <div class="bad_feedback_flash" style="visibility:hidden;"></div>
+        <!-- <div class="feedback_flash" id="bad_end"></div>
+        <div class="feedback_flash" id="good_pred"></div>
+        <div class="feedback_flash" id="bad_pred"></div> -->
+
+        <div class="header_container">
+            <span class="title">
+                <div> <span style="font-size:50px; color:#280024; font-weight: bold ; font-family: 'Ink Free' ;"  > BEHAVIOURAL TEST </span> time ! </div>
+                <div> <span id="trial_disp" style="font-size:10px; color:#474747; font-weight: bold ;margin:0;padding:0;"  > TRIAL 1 - STEP 1 </span> </div>
+            </span>
+            <div class="button_container">
+                <div class="linkbutton" id="toggle_fullscreen">
+                    <span style="color:white ; font-family: fantasy;"> FULLSCREEN </span>
+                </div>
+            </div>
+            <div class="button_container" style="margin-left: 0px;">
+                <a class="linkbutton" href="/canvas">
+                    <span style="color:white ; font-family: fantasy;"> Canvas </span>
+                </a>
+            </div>
+            <div class="button_container" style="margin-left: 0px;">
+                <a class="linkbutton" href="/animation">
+                    <span style="color:white ; font-family: fantasy;"> Animation </span>
+                </a>
+            </div>
+            <div class="button_container" style="margin-right: 15%;margin-left: 0px;">
+                <a class="linkbutton" href="/e">
+                    <span style="color:white ; font-family: fantasy;"> E ? </span>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="fullscreen_this"> 
+            <div class="svgContainer"> 
+                <div style="margin: 0;">          
+                    <span class="canvas_container_slider"> 
+                        <canvas id="canvas" width="750" height="750"></canvas>
+                    </span>
+
+                    <span class="rightbox" id="gauge_container">
+                        <object id="svg1" data="resources/gauge.svg" type="image/svg+xml"></object>
+                    </span>
+                </div>      
+            
+
+                <div class="leftbox">
+                    <span  style="display: inline-block;vertical-align: middle;">
+                        <div id="new_mean_text"> Manually change middlevalue </div>
+                    </span>
+                    <span style="display: inline-block;vertical-align: middle;">
+                        <p style="margin: 10px;">Noise intensity</p>
+                        <div>
+                            <span class="slider_cont">
+                                <input type="range" min="0.0" max="1.0" step="0.1" class="slider" id="int_range">
+                            </span>
+                            <span class="slider_cont">
+                                <p id="int_displayer">0.0</p>
+                            </span>
+                        </div>
+                        <p style="margin: 10px;">Noise Frequency</p>
+                        <div>
+                            <span class="slider_cont">
+                                <input type="range" min="1" max="100" step="1" class="slider" id="freq_range">
+                            </span>
+                            <span class="slider_cont">
+                                <p id="freq_displayer">0.0</p>
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <script src="client_scripts/drawing_board.js" type="module"></script>
+        
+        <script src="client_scripts/gauge_anim_class.js" type="module"></script>
+
+        <script src="client_scripts/backend.js" type="module"></script>
+        
+        <script src="client_scripts/trial_manager.js" type="module"></script>
+    </body>
+</html>
